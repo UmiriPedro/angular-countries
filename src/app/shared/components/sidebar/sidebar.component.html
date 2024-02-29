@@ -1,0 +1,44 @@
+<h2>Paises</h2>
+<hr>
+
+<ul class="list-group">
+  <!-- Con routerLinke="home" le estoy diciendo que tome la ruta "home" del app-routing.module.ts -->
+  <!-- Con routerLinkActive = "active", me marca de azul cuando esta seleccionado ese -->
+  <!-- Con [routerLinkActiveOptions]="{ exact: true }", le estamos diciendo que el path tiene que ser exactamente así, si no no lo pinta -->
+  <!-- <li routerLink=""
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="list-group-item">
+    Home Page
+  </li>
+
+  <li routerLink="about"
+    routerLinkActive="active"
+    class="list-group-item">
+    About Page
+  </li>
+
+  <li routerLink="contact"
+    routerLinkActive="active"
+    class="list-group-item">
+    Contact Page
+  </li> -->
+
+  <li routerLink="countries/by-capital"
+    routerLinkActive="active"
+    class="list-group-item">
+    Por capital
+  </li>
+
+  <li routerLink="countries/by-country"
+    routerLinkActive="active"
+    class="list-group-item">
+    Por país
+  </li>
+
+  <li routerLink="countries/by-region"
+    routerLinkActive="active"
+    class="list-group-item">
+    Por región
+  </li>
+</ul>

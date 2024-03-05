@@ -4,16 +4,21 @@
 <div class="row">
   <div class="col">
     <!-- SearchBox -->
+    <!-- (onValue)="searchByCapital($event)" -->
     <!-- Seteamos la propiedad placeholder del SearchBoxComponent con el valor "Buscar por capital" -->
     <shared-search-box
-      (onValue)="searchByCapital($event)"
-      placeholder="Buscar por capital"></shared-search-box>
+      (onDebounce)="searchByCapital($event)"
+      [initialValue]="initialValue"
+      placeholder="Búsqueda por capital"></shared-search-box>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
     <hr>
+    <!-- Si isLoading es true, muestro el spinner -->
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
     <countries-table [countries]="countries"></countries-table>
   </div>
 </div>

@@ -4,9 +4,11 @@
 <div class="row">
   <div class="col">
     <!-- SearchBox -->
+    <!-- (onValue)="searchByCountry($event)" -->
     <!-- Seteamos la propiedad placeholder del SearchBoxComponent con el valor "Búsqueda por país" -->
     <shared-search-box
-      (onValue)="searchByCountry($event)"
+      (onDebounce)="searchByCountry($event)"
+      [initialValue]="initialValue"
       placeholder="Búsqueda por país"></shared-search-box>
   </div>
 </div>
@@ -14,6 +16,9 @@
 <div class="row">
   <div class="col">
     <hr>
+    <!-- Si isLoading es true, muestro el spinner -->
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
     <countries-table [countries]="countries"></countries-table>
   </div>
 </div>
